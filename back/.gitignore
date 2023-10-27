@@ -1,0 +1,7 @@
+# pythone
+.pytest_cache
+geckodriver.log
+__pycache__
+
+# venv
+.venv
