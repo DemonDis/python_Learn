@@ -24,16 +24,25 @@ def rest_api():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         json = request.json
-        print('!!!!! !!!', json['request_type'])
-        cursor.execute("SELECT * FROM plans")
-        record = cursor.fetchall()
-        print('!!!!!', record)
-        return {
-        'request': {
-            'name': 'hi!'
-        },
-        'request_type': 'auto_test'
-    }
+        if json['request_type'] == 'posts':
+            cursor.execute("SELECT plan_id FROM plans")
+            all_plans = cursor.fetchall()
+            return {
+            'request': {
+                'name': all_plans
+            },
+            'request_type': 'posts'
+        }
+        if json['request_type'] == 'add_posts':
+            cursor.execute("INSERT INTO plans(plan_id, plan_parent_id, plan_stage_id) VALUES ('TEST1', 'TEST1', 'TEST1');")
+            # insert = cursor.fetchall()
+            connection.commit()
+            return {
+            'request': {
+                'name': 'ADD'
+            },
+            'request_type': 'add_posts'
+        }
     else:
         return 'Content-Type not supported'
 
