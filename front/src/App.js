@@ -1,22 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: 'React Hooks POST Request Example' })
+    };
+    fetch('http://127.0.0.1:3030/', requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data));
+  }, []);
+  const chekBack = () => {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+      'request': {'name': 'hi!'},
+      'request_type': 'auto_test' })
+    };
+    fetch('http://127.0.0.1:3030/', requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={() => chekBack()}>CLICK</button>
       </header>
     </div>
   );
