@@ -5,23 +5,25 @@ function App() {
   const [dataDB, setDataDB] = useState([]);
   const [data, setData] = useState('Initializing...')
 
+  const allPostss = () => {
+    fetch('http://127.0.0.1:3030/', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        'request': {},
+        'request_type': 'posts' 
+      }),
+     })
+     .then((response) => response.json())
+     .then((data) => {
+      setDataDB(data ? data.request.name : [])
+     })
+     .catch((error) => {
+       console.error(error);
+     });
+  }
   useEffect(() => {
-      fetch('http://127.0.0.1:3030/', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          'request': {},
-          'request_type': 'posts' 
-        }),
-       })
-       .then((response) => response.json())
-       .then((data) => {
-        setDataDB(data ? data.request.name : [])
-       })
-       .catch((error) => {
-         console.error(error);
-       });
-    
+    allPostss()
   }, []);
 
   const add_date = () => {
@@ -45,8 +47,10 @@ function App() {
         case 'update_posts':
           setData(e.data);
           break;
-        case '5':
-          console.log('!!!!!!!')
+        case 'add_posts':
+          allPostss();
+          console.log('!!!!!!!');
+          break;
         default: setData(e.data);
       }
     }

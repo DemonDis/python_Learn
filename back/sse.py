@@ -48,22 +48,28 @@ def rest_api():
     else:
         return 'Content-Type not supported'
     
+# def sse_events():
+#     # We are using a counter here for sending some value in the response
+#     counter = 0
+#     while True:
+#         # In real world applications here we will fetch some data
+#         # Remember to yield to continue to sending data
+#         yield "data: {}\n\n".format(counter)
+#         # Increase the counter for the next message
+#         counter += 1
+#         # Put a sleep for 2 second
+#         time.sleep(2)
 def sse_events():
-    # We are using a counter here for sending some value in the response
-    counter = 0
+    json = request.json
+    res = json['request_type']
     while True:
-        # In real world applications here we will fetch some data
-        # Remember to yield to continue to sending data
-        yield "data: {}\n\n".format(counter)
-        # Increase the counter for the next message
-        counter += 1
-        # Put a sleep for 2 second
-        time.sleep(2)
+        yield "data: {}\n\n".format(res)
 
 @app.route('/sse')
 def sse():
     # Send back response
     return Response(sse_events(), mimetype="text/event-stream")
+
 if __name__ == "__main__":
     # from waitress import serve
     # serve(app, host="0.0.0.0", port=8080)
