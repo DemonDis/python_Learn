@@ -31,7 +31,7 @@ function Socket_client() {
   return (
     <div>
       <label>
-        Message:
+        SOCKET:
         <input value={messages} onChange={e => onChange(e.target.value)} />
       </label>
       <button onClick={() => sendMessage()}>Send</button>

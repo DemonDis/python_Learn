@@ -63,6 +63,7 @@ function App() {
           allPostss();
           break;
         case 'delete':
+          setData(e.data);
           console.log(e.data)
           allPostss();
           break;
@@ -79,15 +80,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Socket_client/>
-        <button onClick={() => add_date()}>CLICK</button>
+        <div>---- REST ----</div>
+        <button onClick={() => add_date()}>ADD TEST!</button>
         {
           dataDB.map((item, i) => {
             return <div key={i}>{item}</div>
          })
         }
-        <div>------</div>
-        The last streamed item was: {data}
-        <button onClick={() => del_posts()}>Delete</button>
+        SSA: {data}
+        <button onClick={() => del_posts()}>Delete ALL test</button>
       </header>
     </div>
   );

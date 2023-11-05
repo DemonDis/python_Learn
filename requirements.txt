@@ -5,4 +5,3 @@ waitress==2.1.2
 psycopg2-binary==2.9.9
 Flask-SocketIO==5.3.6
 websockets==12.0
-websocket-client==1.6.4 
