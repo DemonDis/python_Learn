@@ -32,7 +32,21 @@ function App() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
       'request': {},
-      'request_type': 'add_posts' })
+      'request_type': 'add_posts' 
+      })
+    };
+    fetch('http://127.0.0.1:3030/', requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }
+  const del_posts = () => {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+      'request': {},
+      'request_type': 'del_posts' 
+      })
     };
     fetch('http://127.0.0.1:3030/', requestOptions)
       .then(response => response.json())
@@ -40,23 +54,24 @@ function App() {
   }
   useEffect(() => {
     const sse = new EventSource('http://127.0.0.1:3030/sse')
-    // const handleStream = (e) => { setData(e.data) }
-    // sse.onmessage = (e) =>{ handleStream(e) }
-    sse.onmessage = (e) => {
+    const handleStream = (e) => { 
       switch (e.data) {
-        case 'update_posts':
+        case 'update':
           setData(e.data);
-          break;
-        case 'add_posts':
+          console.log(e.data)
           allPostss();
-          console.log('!!!!!!!');
           break;
-        default: setData(e.data);
+        case 'delete':
+          console.log(e.data)
+          allPostss();
+          break;
+        default: console.log('empty')
       }
-    }
-    sse.onerror = (e) => { sse.close() }
-    return () => { sse.close()
-    }
+     }
+    sse.onmessage = (e) =>{ handleStream(e) }
+    // sse.onerror = (e) => { sse.close() }
+    // return () => { sse.close()
+    // }
   }, [])
   
   return (
@@ -70,8 +85,7 @@ function App() {
         }
         <div>------</div>
         The last streamed item was: {data}
-        {/* <button onClick={() => startSSE()}>Start SSE</button>
-        <button onClick={() => stopSSE()}>STOP SSE</button> */}
+        <button onClick={() => del_posts()}>Delete</button>
       </header>
     </div>
   );

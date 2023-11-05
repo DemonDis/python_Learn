@@ -17,10 +17,7 @@ cursor = connection.cursor()
 app = Flask(__name__)
 CORS(app)
 
-DB = {
-    "user":"!!!!"
-}
-d = {}
+status = {}
 
 @app.route("/", methods=['GET'])
 def hello():
@@ -42,16 +39,27 @@ def rest_api():
         }
         if json['request_type'] == 'add_posts':
             cursor.execute("INSERT INTO plans(plan_id, plan_parent_id, plan_stage_id) VALUES ('TEST1', 'TEST1', 'TEST1');")
-            # insert = cursor.fetchall()
             connection.commit()
-            d["a"] = 11
-            time.sleep(2)
-            d["a"] = 101
+            status["message"] = 'update'
+            time.sleep(1)
+            status["message"] = 'empty'
             return {
             'request': {
-                'name': 'ADD'
+                'posts': 'ADD'
             },
             'request_type': 'add_posts'
+        }
+        if json['request_type'] == 'del_posts':
+            cursor.execute("DELETE from plans Where plan_id='TEST1'")
+            connection.commit()
+            status["message"] = 'delete'
+            time.sleep(1)
+            status["message"] = 'empty'
+            return {
+            'request': {
+                'posts': 'DELL'
+            },
+            'request_type': 'del_posts'
         }
     else:
         return 'Content-Type not supported'
@@ -60,21 +68,11 @@ def rest_api():
 @app.route('/sse')
 def sse():
     def sse_events():
-        # We are using a counter here for sending some value in the response
-        counter = 0
-        d["a"] = 100
+        status['message'] = ''
         while True:
-            # In real world applications here we will fetch some data
-            # Remember to yield to continue to sending data
-            yield "data: message counter - {}\n\n".format(d['a'])
-            # Increase the counter for the next message
-            
-            # asd = 'as'
-            counter += 1
-            # Put a sleep for 2 second
-            time.sleep(2)
+            yield "data: {}\n\n".format(status['message'])
+            time.sleep(1)
 
-    # Send back response
     return Response(sse_events(), mimetype="text/event-stream")
 if __name__ == "__main__":
     # from waitress import serve
