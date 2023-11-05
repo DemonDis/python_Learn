@@ -1,0 +1,11 @@
+{
+    "plugins": [
+      ["babel-plugin-module-resolver", {
+        "alias": {
+          "^effector$": "effector/compat",
+          "^effector-react$": "effector-react/compat"
+        }
+      }]
+    ],
+    "presets": ["react-app"]
+  }

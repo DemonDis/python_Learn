@@ -64,7 +64,6 @@ def rest_api():
     else:
         return 'Content-Type not supported'
     
-
 @app.route('/sse')
 def sse():
     def sse_events():

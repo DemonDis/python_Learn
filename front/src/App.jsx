@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
+import Socket_client from './components/Socket_client';
 
 function App() {
   const [dataDB, setDataDB] = useState([]);
@@ -77,6 +78,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Socket_client/>
         <button onClick={() => add_date()}>CLICK</button>
         {
           dataDB.map((item, i) => {
