@@ -1,6 +1,7 @@
 import asyncio
 import websockets
-
+from websocket import create_connection
+import json
 # сохраняет всех клиентов, подключенных к серверу
 client_list = []   
 
@@ -10,7 +11,13 @@ async def handler(websocket):
         try:
             message = await websocket.recv()
             print('Message received from client: ', message)           
-            await broadcast(message)
+            # await broadcast(message)
+            if message == 'd':
+                print('!!!!!!', message)
+                await websocket.send(json.dumps({"op":"addr_sub", "addr":"dogecoin_address"}))
+                # websocket.send(json.dumps({"op":"addr_sub", "addr":"dogecoin_address"}))
+                # result =  ws.recv()
+                # print (result)
         except Exception as e:            
             print(e)
             client_list.remove(websocket)
