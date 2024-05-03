@@ -1,0 +1,62 @@
+[
+    {
+        "id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+        "name": "Изменение статуса кошелька ФП Оператором",
+        "status": [
+            {
+                "status": "PLANNED",
+                "sum": 72
+            }
+        ],
+        "sum": 72,
+        "number": 2
+    },
+    {
+        "id": "PLAN_813857ff-331d-4dbd-a8a0-62f1218fbf65",
+        "name": "Регистрация сертификата ключа ФП (полный)",
+        "status": [
+            {
+                "status": "PLANNED",
+                "sum": 9
+            }
+        ],
+        "sum": 9,
+        "number": 3
+    },
+    {
+        "id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+        "name": "Изменение общих лимитов системы",
+        "status": [
+            {
+                "status": "PASSED_COMMENTS",
+                "sum": 26
+            },
+            {
+                "status": "SKIPPED",
+                "sum": 8
+            },
+            {
+                "status": "PASSED",
+                "sum": 4
+            }
+        ],
+        "sum": 38,
+        "number": 1
+    },
+    {
+        "id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+        "name": "Авторизация",
+        "status": [
+            {
+                "status": "PASSED_COMMENTS",
+                "sum": 5
+            },
+            {
+                "status": "PASSED",
+                "sum": 5
+            }
+        ],
+        "sum": 10,
+        "number": 0
+    }
+]

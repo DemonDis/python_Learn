@@ -1,20 +1,16 @@
-# python_Learn
+# BACKEND
 
-## BACKEND
-1. Flask
-2. Django?
+## Запуск проекта на flask (app.py)
+```bash
+$ flask run
+# or
+$ python -m flask run
+# or
+$ python3 -m flask run
+```
 
-## FRONTEND
-1. React js
+### stop VENV
+```bash
+$ deactivate
+```
 
-## DATABASE
-1. Postgresql
-
-## Test
-1. Pytest
-2. Selenium
-3. Cycember
-
-## +
-1. Allure
-2. Docker

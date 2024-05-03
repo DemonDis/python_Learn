@@ -1,0 +1,212 @@
+[
+{
+"plan_id": "PLAN_80bdd948-315d-441d-9095-530d1b986e83",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_d97ae1dc-5692-4a82-a014-d1cc937b0cbd",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_2e5a2465-2a05-425c-bcb7-77829f2916ba",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_0d903c17-55f8-4851-80ba-58b6705bbe55",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_affc25a2-67b0-4fb4-be3b-78816c42c1cb",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_17e5cce4-f122-4056-9b0a-31691f9542f2",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_90be913f-79c1-4510-947d-94573c1100dc",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_6de60aab-c91f-4aa0-ae7a-a76016229873",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_34c44674-fcae-4cec-a9c1-90b59c965c41",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_c567ea34-14a6-45ff-8b01-ad98954f1f07",
+"FATHER_name": "Авторизация",
+"FATHER_id": "PLAN_f59b09cb-a012-46c8-96e0-a79d429c7810",
+"number": 0
+},
+{
+"plan_id": "PLAN_20f1eda6-98fb-47f0-9cb3-960cb8adedb2",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_063ed8e5-7cbb-4013-b863-4163c1b836ac",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_e734d428-e490-4cbe-bc3a-cc4d2dbb4017",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_136ad263-d816-4aad-93f2-eaaf0273bff7",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_26a9e9b4-6f03-439f-a817-a8a53df82921",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_e96af8d7-2a54-45d7-b9c9-6f83fe435729",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_ea4888ba-aa82-411a-bf07-74872cc53c3d",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_6e3c34c9-3897-483c-9c0f-d7f37f0d4345",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_a23e4181-74fa-44a9-8ac8-ecae9fe5094b",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_963b40b6-5530-44be-9100-3708b6dc7c64",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_f4f8db72-5990-42f8-aa96-1254b11e76f9",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_a6cb3a99-a1b6-4ef8-95f6-921ba9b86d80",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_0e46f7ee-05cd-4eee-aeb7-a491ecffa0be",
+"FATHER_name": "Изменение общих лимитов системы",
+"FATHER_id": "PLAN_1a15385d-13a0-402a-bda7-b67c1fd89a63",
+"number": 1
+},
+{
+"plan_id": "PLAN_a9a06fd2-ce18-44ab-af90-e3d86a93435c",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_41279e61-5c2d-4281-b028-046b31c77def",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_6caf19da-e805-475d-898a-1bf925e0aceb",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_f5ae0771-0914-44a1-a5f7-01971300f9bc",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_af26c0be-62b0-4db6-a30f-35d3e9563f0a",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_183198a7-e8fe-43fa-ad28-99081b47aef3",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_8555bf0d-2768-4dff-b126-c71f0aea3a29",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_1250077d-d602-44a5-88ee-848ff128767e",
+"FATHER_name": "Изменение статуса кошелька ФП Оператором",
+"FATHER_id": "PLAN_29d34f9f-7c13-422c-9db1-1c703a89c60f",
+"number": 2
+},
+{
+"plan_id": "PLAN_d3695898-4850-4a75-94a7-718bebdf6197",
+"FATHER_name": "Регистрация сертификата ключа ФП (полный)",
+"FATHER_id": "PLAN_813857ff-331d-4dbd-a8a0-62f1218fbf65",
+"number": 3
+},
+{
+"plan_id": "PLAN_bf759e8e-a5b8-4754-a607-10e9213fb6de",
+"FATHER_name": "Регистрация сертификата ключа ФП (полный)",
+"FATHER_id": "PLAN_813857ff-331d-4dbd-a8a0-62f1218fbf65",
+"number": 3
+},
+{
+"plan_id": "PLAN_06f33294-7e1e-4666-bfc1-7ca8b2cf33a3",
+"FATHER_name": "Регистрация сертификата ключа ФП (полный)",
+"FATHER_id": "PLAN_813857ff-331d-4dbd-a8a0-62f1218fbf65",
+"number": 3
+},
+{
+"plan_id": "PLAN_e05dd56f-a54b-4e2f-9bde-e617e937126c",
+"FATHER_name": "Регистрация сертификата ключа ФП (полный)",
+"FATHER_id": "PLAN_813857ff-331d-4dbd-a8a0-62f1218fbf65",
+"number": 3
+}
+]
