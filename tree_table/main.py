@@ -14,15 +14,15 @@ data = [
     {"id": "5", "name": "child_5", "status": "pass", "parent_id": "444"},
     {"id": "6", "name": "child_5", "status": "pass", "parent_id": "444"},
     {"id": "001", "name": "name_2", "status": "pass", "parent_id": None},
-     {"id": "002", "name": "name_2", "status": "pass", "parent_id": None},
-     {"id": "003", "name": "name_2", "status": "pass", "parent_id": None},
-     {"id": "004", "name": "name_2", "status": "pass", "parent_id": None},
+    {"id": "002", "name": "name_2", "status": "pass", "parent_id": None},
+    {"id": "003", "name": "name_2", "status": "pass", "parent_id": None},
+    {"id": "004", "name": "name_2", "status": "pass", "parent_id": None},
     {"id": "33", "name": "child_1", "status": "pass", "parent_id": "004"},
     {"id": "3443", "name": "child_1", "status": "pass", "parent_id": "004"},
     {"id": "666", "name": "child_1", "status": "pass", "parent_id": "004"},
 ]
 
-def make_tree2(tests):
+def make_tree(tests):
     # Сюда кладутся элементы без родителей
     tree = []
 
@@ -76,4 +76,49 @@ def make_tree2(tests):
     return tree
 
 with open('./static/put/data_tree.json', 'w') as f:
-    f.write(json.dumps(make_tree2(data), indent=4))
+    f.write(json.dumps(make_tree(data), indent=4))
+
+
+def make_node(data_dct):
+    node = {
+        "key" : "", 
+        "data" : {
+            "name" : data_dct["name"],
+            "id"   : data_dct["id"],
+            "status" : data_dct["status"]
+        },
+        "children" : []
+    }
+    return node
+    
+def add_node(data_dct, pool, id_to_data_map):
+    cur_id = data_dct["id"]
+    if cur_id in pool:
+        return
+
+    parent_id = data_dct["parent_id"]
+    if parent_id not in pool:
+        add_node(id_to_data_map[parent_id], pool, id_to_data_map)
+        return
+    parent_node = pool[parent_id]
+
+    node = make_node(data_dct)
+    pool[cur_id] = node
+
+    num = len(parent_node["children"])
+    key = parent_node["key"]
+    node["key"] = f"{num}" if key == "" else f"{key}-{num}"
+
+    parent_node["children"].append(node)
+
+def make_tree_2(data):
+    dummy_root = make_node({"id": "", "name": "", "status": "", "parent_id": None})
+    id_to_data_map = {dct["id"] : dct for dct in data}
+    pool = {None : dummy_root}
+    for dct in data:
+        add_node(dct, pool, id_to_data_map)
+
+    return dummy_root["children"]
+
+with open('./static/put/data_tree_2.json', 'w') as f:
+    f.write(json.dumps(make_tree_2(data), indent=4))
